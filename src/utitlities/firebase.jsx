@@ -19,8 +19,6 @@ const firebaseConfig = {
   measurementId: "G-WR5ZGP4JSP"
 };
 
-// Initialize Firebase
-
 
 
 const firebase = initializeApp(firebaseConfig);
@@ -40,7 +38,7 @@ const firebaseSignOut = () => signOut(getAuth(firebase));
 
 export { firebaseSignOut as signOut };
 
-export const useUserState = () => useAuthState( getAuth(firebase));
+export const useUserState = () => useAuthState(getAuth(firebase));
 
 export const useData = (path, transform) => {
     const [data, setData] = useState();

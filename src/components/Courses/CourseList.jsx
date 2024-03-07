@@ -9,6 +9,7 @@ import { Course } from "./Course";
 
   
    export const CourseList = ({ courses }) => {
+    console.log('hello')
     const [term, setTerm] = useState('Fall');
     const [selected, setSelected] = useState([]);
     

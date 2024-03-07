@@ -23,7 +23,7 @@ export const TermSelector = ({term, setTerm}) => {
         )
       }
       </div>
-      { user ? <SignOutButton /> : <SignInButton /> }
+       { user ? <SignOutButton /> : <SignInButton /> }
     </div>
   );
 };
