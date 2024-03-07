@@ -2,7 +2,7 @@
 import React from "react";
 
 import { terms } from "../../utitlities/Variables";
-import { useUserState } from "../../utitlities/Firebase";
+import { useUserState } from "../../utitlities/firebase";
 import { TermButton } from "./TermButton";
 
 import { SignInButton } from "./SignIn";

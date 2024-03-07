@@ -1,11 +1,12 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import useForm from "./UseForm";
-
-import { setData } from "../utitlities/Firebase";
+//import { timeParts } from "./times";
+import { setData } from "../utitlities/firebase";
 import{validateCourseData} from '../utitlities/Functions'
 
 
+//const submit = (values) => alert(JSON.stringify(values));
  
 const submit = async (values) => {
     if (window.confirm(`Change ${values.id} to ${values.title}: ${values.meets}`)) {
@@ -17,17 +18,17 @@ const submit = async (values) => {
     }
   };
 
- 
+  
 
-const EditForm = () => {
+  const EditForm = () => {
     const { state: course } = useLocation();
     const [ errors, handleSubmit ] = useForm(validateCourseData, submit);
     return (
       <form onSubmit={handleSubmit} noValidate className={errors ? 'was-validated' : null}>
-          <input type="hidden" name="id" value={course.id} />
-          <div className="mb-3">
+        <input type="hidden" name="id" value={course.id} />
+        <div className="mb-3">
           <label htmlFor="title" className="form-label">Course title</label>
-          <input className="form-control" id="title" name="title" defaultValue={course.title} />
+          <input className="form-control" id="title" defaultValue={course.title} />
           <div className="invalid-feedback">{errors?.title}</div>
         </div>
         <div className="mb-3">
@@ -39,5 +40,8 @@ const EditForm = () => {
       </form>
     )
   };
+
+
+
   
   export default EditForm;

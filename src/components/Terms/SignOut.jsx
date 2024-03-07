@@ -1,4 +1,4 @@
-import { signOut } from "../../utitlities/Firebase";
+import { signOut } from "../../utitlities/firebase";
 
 export const SignOutButton = () => (
     <button className="btn btn-secondary btn-sm"

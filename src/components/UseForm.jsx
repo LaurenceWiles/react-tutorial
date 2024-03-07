@@ -3,12 +3,7 @@
 import { useState } from 'react';
 
 
-
-
-
-
-
- const useForm = (validate, submit) => {
+export  const useForm = (validate, submit) => {
   const [errors, setErrors] = useState(null);
 
   const handleSubmit = (evt) => {

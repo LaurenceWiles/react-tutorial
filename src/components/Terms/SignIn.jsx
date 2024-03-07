@@ -1,4 +1,4 @@
-import { signInWithGoogle } from "../../utitlities/Firebase";
+import { signInWithGoogle } from "../../utitlities/firebase";
 
 
 export const SignInButton = () => (

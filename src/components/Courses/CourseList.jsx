@@ -8,10 +8,10 @@ import { TermSelector } from '../Terms/TermSelector';
 import { Course } from "./Course";
 
   
-  export const CourseList = ({ courses }) => {
+   export const CourseList = ({ courses }) => {
     const [term, setTerm] = useState('Fall');
     const [selected, setSelected] = useState([]);
-  
+    
     if (selected.some(course => course !== courses[course.id])) {
       setSelected([])
     };
@@ -32,3 +32,4 @@ import { Course } from "./Course";
       </>
     );
   };
+  

@@ -5,7 +5,7 @@ import React from 'react';
 import { Banner } from './components/Banner';
 import { CourseList } from './components/Courses/CourseList';
 import { addScheduleTimes } from './utitlities/Functions';
-import {useData} from './utitlities/Firebase';
+import {useData} from './utitlities/firebase';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EditForm from './components/EditForm';
 
@@ -24,7 +24,7 @@ const fetchSchedule = async () => {
 const Main = () =>  {
   
   const [data, loading, error] = useData('/', addScheduleTimes);
- 
+ console.log(data,'data')
   
   if (error) return <h1>{error}</h1>;
   if (loading) return <h1>Loading the schedule...</h1>
